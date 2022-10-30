@@ -1,8 +1,8 @@
-public class Conta {
-    private Cliente cliente;
-    private int numeroConta;
-    private Cliente titular;
-    private double saldo;
+public class Conta{
+    protected Cliente cliente;
+    protected int numeroConta;
+    protected Cliente titular;
+    protected double saldo;
 
     public Conta(Cliente cliente, int numeroConta, Cliente titular, double saldo) {
         this.cliente = cliente;
@@ -46,30 +46,18 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    boolean transferePara(Conta destino, double valor){
-        boolean retirar = this.saque(valor);
-        if (retirar == false){
-            return false;
-        }else{
-            destino.depositar(valor);
-            System.out.println("A conta " + destino + "recebeu R$ " + valor);
-            return true;
-        }
+    public boolean transferePara(Conta destino, double valor) {
+        return false;
     }
 
-    private void depositar(double valor)   {
-        if (valor > 0)
-            this.saldo += valor;
+
+    public void depositar(double valor) {
+
     }
 
 
     public boolean saque(double valor) {
-        if ((this.saldo < valor) && (valor > 0)) {
-            return false;
-        } else {
-            this.saldo -= valor;
-            return true;
-        }
+        return false;
     }
 
     @Override
