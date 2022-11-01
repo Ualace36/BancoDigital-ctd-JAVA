@@ -22,7 +22,8 @@ public class ContaPoupanca extends Conta{
     @Override
     public boolean depositar(double valor) {
        if (valor > 0) {
-           this.saldo += valor;
+           this.saldo += valor * 0.02;
+           System.out.println("Saldo com rendimento da poupança: " + saldo);
            return true;
        }else {
            System.out.println("Por favor, deposite um valor positivo.");

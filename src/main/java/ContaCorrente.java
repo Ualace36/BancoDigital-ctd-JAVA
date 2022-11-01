@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta {
 
     public ContaCorrente(Cliente cliente, int numeroConta, Cliente titular, double saldo) {
         super(cliente, numeroConta, titular, saldo);
@@ -6,17 +6,37 @@ public class ContaCorrente extends Conta{
 
     @Override
     public boolean transferePara(Conta destino, double valor) {
-        return super.transferePara(destino, valor);
+        boolean retirou = this.saque(valor);
+        if (retirou == false) {
+            return false;
+
+        } else {
+            destino.depositar(valor);
+            System.out.println("A conta " + destino + "recebeu R$ " + valor);
+            return true;
+        }
+
     }
 
     @Override
     public boolean depositar(double valor) {
-        super.depositar(valor);
-        return false;
+        if (valor > 0) {
+            this.saldo += valor;
+            System.out.println("Saldo após depósito: " + saldo);
+            return true;
+        } else {
+            System.out.println("Por favor, deposite um valor positivo.");
+            return false;
+        }
     }
 
     @Override
     public boolean saque(double valor) {
-        return super.saque(valor);
+        if ((this.saldo < valor) || (valor < 0)) {
+            return false;
+        } else {
+            this.saldo -= valor;
+            return true;
+        }
     }
 }
