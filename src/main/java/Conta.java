@@ -1,4 +1,4 @@
-public class Conta{
+public abstract class Conta{
     protected Cliente cliente;
     protected int numeroConta;
     protected Cliente titular;
@@ -51,12 +51,13 @@ public class Conta{
     }
 
 
-    public void depositar(double valor) {
+    public boolean depositar(double valor) {
 
+        return false;
     }
 
 
-    public boolean saque(double valor) {
+    boolean saque(double valor) {
         return false;
     }
 

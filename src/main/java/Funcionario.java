@@ -32,4 +32,13 @@ public class Funcionario {
     public void setSalario(Double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", salario=" + salario +
+                '}';
+    }
 }
