@@ -18,8 +18,7 @@ ___
 
 ___
 
-<img src="https://github.com/Ualace36/dataImag/blob/main/banner-linkedin.png
-" width="1200">
+<img src="https://github.com/Ualace36/dataImag/blob/main/banner-linkedin.png" width="1200">
 
 ## :information_source: Sobre
 
