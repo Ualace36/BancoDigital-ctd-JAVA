@@ -1,27 +1,19 @@
 public class Endereco {
-  private String bairro;
-  private String rua;
-  private String numero;
-  private String cep;
-  private String cidade;
 
-    public Endereco() {
-    }
+    protected String rua;
+    protected String numero;
+    protected   String bairro;
+    protected String complemento;
+    protected String cidade;
+    protected String estado;
 
-    public Endereco(String bairro, String rua, String numero, String cep, String cidade) {
-        this.bairro = bairro;
+    public Endereco(String rua, String numero, String bairro, String complemento, String cidade, String estado) {
         this.rua = rua;
         this.numero = numero;
-        this.cep = cep;
-        this.cidade = cidade;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
         this.bairro = bairro;
+        this.complemento = complemento;
+        this.cidade = cidade;
+        this.estado = estado;
     }
 
     public String getRua() {
@@ -40,12 +32,20 @@ public class Endereco {
         this.numero = numero;
     }
 
-    public String getCep() {
-        return cep;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setCep(String cep) {
-        this.cep = cep;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
     public String getCidade() {
@@ -56,13 +56,22 @@ public class Endereco {
         this.cidade = cidade;
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
         return
-                "Bairro: " + bairro +
-                        ", Rua: " + rua +
-                        ", Numero: " + numero + '\'' +
-                        ", Cep: " + cep +
-                        ", Cidade: " + cidade ;
+                "rua: " + rua +" --"+
+                " NÚMERO: " + numero +" --"+
+                " BAIRRO: " + bairro +" --"+
+                " COMPLEMENTO: " + complemento +" --"+
+                " CIDADE: " + cidade +" --"+
+                " ESTADO: " + estado+".";
     }
 }

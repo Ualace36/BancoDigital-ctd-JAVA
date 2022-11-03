@@ -1,11 +1,9 @@
 public class Cliente {
-    private String nome;
-    private String sobrenome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String sobrenome;
+    protected String cpf;
 
-    public Cliente() {
-    }
+   Endereco endereco;
 
     public Cliente(String nome, String sobrenome, String cpf, Endereco endereco) {
         this.nome = nome;
@@ -49,9 +47,8 @@ public class Cliente {
     @Override
     public String toString() {
         return
-                nome +
-                        " " + sobrenome  +
-                        ", CPF: " + cpf + " "
-                        + ", End: " + endereco;
+                 nome  + " " + sobrenome +
+                " -- CPF: " + cpf +
+                " Endereco: " + endereco;
     }
 }

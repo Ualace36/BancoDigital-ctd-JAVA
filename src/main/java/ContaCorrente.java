@@ -1,42 +1,14 @@
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta{
 
-    public ContaCorrente(Cliente cliente, int numeroConta, Cliente titular, double saldo) {
-        super(cliente, numeroConta, titular, saldo);
+
+    public ContaCorrente(Cliente cliente, int agencia, double saldo) {
+        super(cliente, agencia, saldo);
     }
 
     @Override
-    public boolean transferePara(Conta destino, double valor) {
-        boolean retirou = this.saque(valor);
-        if (retirou == false) {
-            return false;
-
-        } else {
-            destino.depositar(valor);
-            System.out.println("A conta " + destino + "recebeu R$ " + valor);
-            return true;
-        }
-
+    public void imprimirExtrato() {
+        System.out.println("*** Extrato Conta Corrente ***");
+        super.atributosComunsDeImpressao();
     }
 
-    @Override
-    public boolean depositar(double valor) {
-        if (valor > 0) {
-            this.saldo += valor;
-            System.out.println("Saldo após depósito: " + saldo);
-            return true;
-        } else {
-            System.out.println("Por favor, deposite um valor positivo.");
-            return false;
-        }
-    }
-
-    @Override
-    public boolean saque(double valor) {
-        if ((this.saldo < valor) || (valor < 0)) {
-            return false;
-        } else {
-            this.saldo -= valor;
-            return true;
-        }
-    }
 }
