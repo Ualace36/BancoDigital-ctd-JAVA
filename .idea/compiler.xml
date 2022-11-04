@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BancoDigital-CTD (1)" />
-        <module name="BancoDigital-CTD" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BancoDigital-CTD" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
