@@ -4,7 +4,7 @@ ___
 
 
 <p align="center">
-  <img src="https://github.com/Ualace36/dataImag/blob/main/apiLogo.png" width="300" heigth="300">
+  <img src="https://github.com/Ualace36/dataImag/blob/main/mavenLogo.png" width="300" heigth="300">
 </p>
 
 [![skills](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://docs.oracle.com/en/java/)
