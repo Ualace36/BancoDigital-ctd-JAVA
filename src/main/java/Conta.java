@@ -69,7 +69,7 @@ public abstract class Conta implements IConta{
         LOGGER.info("O MÉTODO TRANSFERIR() FOI ACIONADO");
         this.sacar(valor);
          contaDestino.depositar(valor);
-         System.out.println("Transferência efetuada com sucesso.");
+         System.out.println("Op Transferência feita para a conta de: "   + contaDestino.getCliente());
          System.out.println("Saldo após a transferência: R$ " + this.saldo);
          return true;
      }
