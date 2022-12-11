@@ -23,7 +23,7 @@ ___
 
 ## :information_source: Sobre
 
-Este é o projeto Maven de um Banco Digital. Neste projeto criamos os métdos Saque, Transferir e Depositar e suas alterações consistentes na conta origem e destino. 
+Este é um projeto descktop com Maven de um Banco Digital. Neste projeto criamos os métdos Saque, Transferir e Depositar e suas alterações consistentes na conta origem e destino. 
 
 ## :interrobang: Motivo
 
